@@ -14,7 +14,7 @@ document.getElementById("gl").innerHTML = guessLeft;
 // GENERATE A RANDOM NUMBER AND STORE INSIDE VAR compLetter
 var compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
 console.log(compLetter);
-// document.getElementById("cl").innerHTML = compLetter;
+document.getElementById("cl").innerHTML = compLetter;
 
 // GET USER GUESS FROM KEYBOARD 
 document.onkeydown = function (event) {
@@ -37,7 +37,7 @@ document.onkeydown = function (event) {
         guessLeft = 10;
         guesses = [];
         compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
-        // document.getElementById("cl").innerHTML = compLetter;
+        document.getElementById("cl").innerHTML = compLetter;
         
     }
 
@@ -45,7 +45,7 @@ document.onkeydown = function (event) {
     document.getElementById("win").innerHTML = wins;
     document.getElementById("loss").innerHTML = losses;
     document.getElementById("gl").innerHTML = guessLeft;
-    // document.getElementById("cl").innerHTML = compLetter;
+    document.getElementById("cl").innerHTML = compLetter;
 
 } // end of function 
 
