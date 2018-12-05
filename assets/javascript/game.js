@@ -20,7 +20,6 @@ document.getElementById("cl").innerHTML = compLetter;
 document.onkeydown = function (event) {
     var userGuess = event.key;
 
-
     if (userGuess == compLetter) {
         wins++;
         guessLeft = 10;
