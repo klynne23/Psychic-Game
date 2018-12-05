@@ -6,19 +6,20 @@ var guesses = [];
 
 
 // DISPLAY VARIABLES IN BROSWER
-wins = document.getElementById("win");
-losses = document.getElementById("loss");
-guessLeft = document.getElementById("gl");
+document.getElementById("win").innerHTML = wins;
+document.getElementById("loss").innerHTML = losses;
+document.getElementById("gl").innerHTML = guessLeft;
 
 
 // GENERATE A RANDOM NUMBER AND STORE INSIDE VAR compLetter
 var compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
-compLetter = document.getElementById("cl");
+console.log(compLetter);
+// document.getElementById("cl").innerHTML = compLetter;
 
 // GET USER GUESS FROM KEYBOARD 
 document.onkeydown = function (event) {
     var userGuess = event.key;
-    guesses.push(userGuess);
+
 
     if (userGuess == compLetter) {
         wins++;
@@ -28,21 +29,23 @@ document.onkeydown = function (event) {
     }
     else {
         guessLeft--;
-        guesses = document.getElementById("guess");
+        guesses.push(userGuess);
+        document.getElementById("guess").innerHTML = guesses;
     }
     if (guessLeft == 0) {
         losses++;
         guessLeft = 10;
-        compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
-        document.getElementById("cl") = compLetter;
         guesses = [];
+        compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+        // document.getElementById("cl").innerHTML = compLetter;
+        
     }
 
     // DISPLAY NEW VARIABLES IN BROSWER
-    compLetter = document.getElementById("cl");
-    wins = document.getElementById("win");
-    losses = document.getElementById("loss");
-    guessLeft = document.getElementById("gl");
-
+    document.getElementById("win").innerHTML = wins;
+    document.getElementById("loss").innerHTML = losses;
+    document.getElementById("gl").innerHTML = guessLeft;
+    // document.getElementById("cl").innerHTML = compLetter;
 
 } // end of function 
+
