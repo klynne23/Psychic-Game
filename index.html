@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PSYCHIC GAME</title>
+
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+   
+
+</head>
+
+<!-- pseudo code
+    1. generate a random letter (compLetter)
+    2. take input from keyboard (userInput)
+    3. compare userinput to the random letter (userInput == compLetter)
+    4. if (userInput == compLetter) {
+      increase wins by 1
+      set guesses left = 10
+      set guesses so far at 0
+      generate a new compLetter
+    }
+      else {
+        decrease guesses left by 1
+        add userinput to guesses so far
+      }
+    5. if (guesses left == 0) {
+        increases losses by 1
+        set guesses left = 10
+        set guesses so far at 0
+        generate a new compLetter
+    }  
+  -->
+
+<body>
+
+    <h1> Psychic Game </h1>
+    Random Letter: <span id="cl"></span>
+    <br><br>
+    Guess what letter I am thinking of!
+    <br><br>
+    Wins: <span id="win"></span>
+    <br><br>
+    Losses: <span id="loss"></span>
+    <br><br>
+    Guesses Left: <span id="gl"></span>
+    <br><br>
+    Your Guesses so far: <span id="guess"></span>
+
+
+    <!-- <script type="text/javascript">
+
+        // DECLARE VARIABLES
+        var wins = 0;
+        var losses = 0;
+        var guessLeft = 10;
+        var guesses = [];
+    
+    
+        // DISPLAY VARIABLES IN BROSWER
+        document.getElementById("win").innerHTML = wins;
+        document.getElementById("loss").innerHTML = losses;
+        document.getElementById("gl").innerHTML = guessLeft;
+    
+    
+        // GENERATE A RANDOM NUMBER AND STORE INSIDE VAR compLetter
+        var compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+        document.getElementById("cl").innerHTML = compLetter;
+    
+        // GET USER GUESS FROM KEYBOARD 
+        document.onkeydown = function (event) {
+          var userGuess = event.key;
+    
+    
+          if (userGuess == compLetter) {
+            wins++;
+            guessLeft = 10;
+            guesses = [];
+            compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+          }
+          else {
+            guessLeft--;
+            guesses.push(userGuess);
+            document.getElementById("guess").innerHTML = guesses;
+          }
+          if (guessLeft == 0) {
+            losses++;
+            guessLeft = 10;
+            compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+            document.getElementById("cl").innerHTML = compLetter;
+            guesses = [];
+          }
+    
+          // DISPLAY NEW VARIABLES IN BROSWER
+          document.getElementById("cl").innerHTML = compLetter;
+          document.getElementById("win").innerHTML = wins;
+          document.getElementById("loss").innerHTML = losses;
+          document.getElementById("gl").innerHTML = guessLeft;
+    
+    
+        } // end of function 
+    
+      </script> -->
+</body>
+
+
+</html>
