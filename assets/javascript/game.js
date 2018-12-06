@@ -1,4 +1,6 @@
 // DECLARE VARIABLES
+var alphabet = ['abcdefghijklmnopqrstuvwxyz']; //alphabet array
+var alpha; // will hold the split alpha array
 var wins = 0;
 var losses = 0;
 var guessLeft = 10;
@@ -16,9 +18,22 @@ var compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
 console.log(compLetter);
 document.getElementById("cl").innerHTML = compLetter;
 
+//SPLIT UP ALPHABET ARRAY
+alpha = alphabet[0].split('')
+
 // GET USER GUESS FROM KEYBOARD 
 document.onkeydown = function (event) {
     var userGuess = event.key;
+
+    //EVALUTE IF KEY PRESSED WAS A LETTER
+    if (!(alpha.includes(userGuess))) {
+        return alert("press a valid key");
+    };
+
+    //check if userguess exists inside userGuesses
+    if (guesses.includes(userGuess)) {
+        return alert("select a new letter");
+    };
 
     if (userGuess == compLetter) {
         wins++;
@@ -37,6 +52,7 @@ document.onkeydown = function (event) {
         guesses = [];
         compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
         document.getElementById("cl").innerHTML = compLetter;
+        // location.reload();
         
     }
 

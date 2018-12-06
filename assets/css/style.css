@@ -3,8 +3,6 @@ body {
     background-size: cover;
 }
 
-
-
 h1, h4, h6, p {
     text-align: center;
     color: white;
@@ -12,6 +10,7 @@ h1, h4, h6, p {
 
 h1 {
     margin-top:3%;
+    font-size: 6em;
 }
 
 div.letter {
@@ -22,11 +21,12 @@ div.letter {
 div.letter:hover {
     background: linear-gradient(to right, #03001e, #7303c0, #bd39df,  #7303c0, #03001e); 
     opacity: 1;
-    
 }
 
 .letter p {
     color: white;
-    margin-top: 17%;
+    margin-top: 12%;
 }
+
+
 
