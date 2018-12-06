@@ -39,6 +39,7 @@ document.onkeydown = function (event) {
         wins++;
         guessLeft = 10;
         guesses = [];
+        document.getElementById("guess").innerHTML = guesses;
         compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
     }
     else {
@@ -50,6 +51,7 @@ document.onkeydown = function (event) {
         losses++;
         guessLeft = 10;
         guesses = [];
+        document.getElementById("guess").innerHTML = guesses;
         compLetter = String.fromCharCode(Math.floor(Math.random() * 26) + 97)
         document.getElementById("cl").innerHTML = compLetter;
         // location.reload();
